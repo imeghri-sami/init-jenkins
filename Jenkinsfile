@@ -3,12 +3,20 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'Building ...'
+                script {
+                    if (isUnix()) {
+                        sh 'Building unix ...'
+                    }else {
+                        echo 'Building on windows...'
+                    }
+                    
+                }
+                
             }
         }
         stage('test') {
             steps {
-                sh 'Testing ...'
+                echo 'Testing ...'
             }
         }
     }
