@@ -8,7 +8,7 @@ pipeline {
                         sh 'Building unix ...'
                     }else {
                         echo 'Getting maven verison ...'
-                        sh 'mvn -v'
+                        batch 'mvn -v'
                     }
                     
                 }
