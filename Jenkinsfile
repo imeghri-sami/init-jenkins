@@ -7,7 +7,8 @@ pipeline {
                     if (isUnix()) {
                         sh 'Building unix ...'
                     }else {
-                        echo 'Building on windows...'
+                        echo 'Getting maven verison ...'
+                        echo 'mvn -v'
                     }
                     
                 }
